@@ -9,9 +9,10 @@ apt install zsh -y
 
 chsh -s $(which zsh)
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo -u arsalan sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-add-apt-repository ppa:aacebedo/fasd
+add-apt-repository ppa:aacebedo/fasd -y
+apt update
 apt install fasd -y
 
-echo 'eval "$(fasd --init auto)"' >> ~/.zshrc
+sudo -u arsalan echo 'eval "$(fasd --init auto)"' >> ~/.zshrc
